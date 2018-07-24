@@ -11,6 +11,10 @@ chrome.runtime.sendMessage('eiceogpklagmibnoccdincfglccflknk', { cap: true }, as
                 }
             }
         });
+        const localView = document.createElement('video');
+        localView.srcObject = stream;
+        document.body.appendChild(localView);
+        localView.play();
     } catch (e) {
         console.error(e);
         return;
@@ -25,7 +29,10 @@ chrome.runtime.sendMessage('eiceogpklagmibnoccdincfglccflknk', { cap: true }, as
         const room = peer.joinRoom('hoge_fuga_piyo_sfu', { mode: 'sfu', stream });
         room.on('stream', stream => {
             console.log(`room on stream peerId:${stream.peerId}`);
+            const remoteView = document.createElement('video');
             remoteView.srcObject = stream;
+            document.body.appendChild(remoteView);
+            remoteView.play();
         });
     });
 });
