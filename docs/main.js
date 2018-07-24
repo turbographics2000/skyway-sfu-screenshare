@@ -1,8 +1,9 @@
 const myId = (new MediaStream).id;
 console.log(`myId:${myId}`);
 chrome.runtime.sendMessage('eiceogpklagmibnoccdincfglccflknk', { cap: true }, async streamId => {
+    let stream = null;
     try {
-        const stream = await navigator.mediaDevices.getUserMedia({
+        stream = await navigator.mediaDevices.getUserMedia({
             video: {
                 mandatory: {
                     chromeMediaSource: 'desktop',
