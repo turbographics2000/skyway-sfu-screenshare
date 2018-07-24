@@ -22,7 +22,7 @@ chrome.runtime.sendMessage('eiceogpklagmibnoccdincfglccflknk', { cap: true }, as
     });
     peer.on('open', id => {
         myIdDisp.textContent = id;
-        const room = peer.joinRoom('hoge_fuga_piyo', { mode: 'sfu', stream });
+        const room = peer.joinRoom('hoge_fuga_piyo_sfu', { mode: 'sfu', stream });
         room.on('stream', stream => {
             console.log(`room on stream peerId:${stream.peerId}`);
             remoteView.srcObject = stream;
