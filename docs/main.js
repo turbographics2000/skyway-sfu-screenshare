@@ -13,9 +13,7 @@ chrome.runtime.sendMessage('eiceogpklagmibnoccdincfglccflknk', { cap: true }, as
             video: {
                 mandatory: {
                     chromeMediaSource: 'desktop',
-                    chromeMediaSourceId: streamId,
-                    minWidth: 1280,
-                    minHeight: 720
+                    chromeMediaSourceId: streamId
                 }
             }
         });
@@ -26,7 +24,7 @@ chrome.runtime.sendMessage('eiceogpklagmibnoccdincfglccflknk', { cap: true }, as
     }
     console.log(`streamId:${stream.id}`);
     const peer = new Peer(myId, {
-        key: '72d92eaf-4dc0-4215-b8cf-8a58e9adc1ed' // 1時間映像のみ送受信 (3人目接続しすぐに3人目を切断) (スクリーンシェア)
+        key: '4a7fa99d-23d3-48e8-9a07-d86c12446718' // 1時間映像のみ送受信 (2人接続して、２人目が１人目の映像が表示されていない状態) (スクリーンシェア)
     });
     peer.on('open', id => {
         myIdDisp.textContent = id;
