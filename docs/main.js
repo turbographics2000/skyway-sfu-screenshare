@@ -24,7 +24,7 @@ chrome.runtime.sendMessage('eiceogpklagmibnoccdincfglccflknk', { cap: true }, as
     }
     console.log(`streamId:${stream.id}`);
     const peer = new Peer(myId, {
-        key: '01099bd8-1083-4c33-ba9b-564a1377e901'
+        key: 'ded71f90-bbba-4a06-b134-e0e73562d500' // 1時間映像のみ送受信 (3人目接続しすぐに3人目を切断) (スクリーンシェア)
     });
     peer.on('open', id => {
         myIdDisp.textContent = id;
