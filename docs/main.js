@@ -14,6 +14,8 @@ chrome.runtime.sendMessage('eiceogpklagmibnoccdincfglccflknk', { cap: true }, as
                 mandatory: {
                     chromeMediaSource: 'desktop',
                     chromeMediaSourceId: streamId
+                    minWidth: 1280,
+                    minHeight: 720
                 }
             }
         });
